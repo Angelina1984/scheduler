@@ -4,6 +4,7 @@ import org.job.jobscheduler.model.EmailJob;
 import org.job.jobscheduler.model.Job;
 import org.job.jobscheduler.model.TimeBasedTrigger;
 import org.job.jobscheduler.model.Trigger;
+import org.job.jobscheduler.scheduler.ExecutionContext;
 import org.job.jobscheduler.scheduler.JobScheduler;
 
 import java.time.LocalDateTime;
@@ -20,7 +21,8 @@ public class Main {
         LocalDateTime timeToTrigger = LocalDateTime.now();
         Trigger trigger = new TimeBasedTrigger(timeToTrigger);
 
-        JobScheduler jobScheduler = new JobScheduler();
+        ExecutionContext executionContext = new ExecutionContext(2);
+        JobScheduler jobScheduler = new JobScheduler(executionContext);
         jobScheduler.addJob(job, trigger);
         jobScheduler.addJob(job2, trigger);
         jobScheduler.runJobs();

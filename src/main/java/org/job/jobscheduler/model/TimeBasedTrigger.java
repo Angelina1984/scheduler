@@ -10,6 +10,6 @@ public class TimeBasedTrigger implements Trigger {
     }
 
     public boolean shouldTrigger() {
-        return LocalDateTime.now().isAfter(timeToTrigger);
+        return timeToTrigger.isAfter(LocalDateTime.now());
     }
 }

@@ -56,7 +56,7 @@ To get started with the Job Scheduler project, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/job-scheduler.git
+   git clone https://github.com/yourusername/scheduler.git
    ```
 2. Navigate to the project directory:
    ```bash
